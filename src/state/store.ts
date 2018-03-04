@@ -1,9 +1,17 @@
-import { createStore, Store } from 'redux';
+import { createStore, Store, applyMiddleware, compose } from 'redux';
+import createSagaMiddleware from 'redux-saga'
 import { State, state } from './root-reducer';
 import initialState from './root-state';
+import helloWorldSaga from '../components/AsyncCounter/asyncCounter-sagas';
+
+const composeEnhancers = (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const sagaMiddleware = createSagaMiddleware();
+const enhancers = composeEnhancers(applyMiddleware(sagaMiddleware));
 
 export const store: Store<State> = createStore(
   state,
   initialState!,
-  (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__(),
+  enhancers,
 );
+
+sagaMiddleware.run(helloWorldSaga);

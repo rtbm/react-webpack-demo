@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "webpack": "webpack",
-    "webpack-dev-server": "webpack-dev-server"
+    "webpack-serve": "webpack-serve"
   },
   "author": "",
   "license": "ISC",
@@ -20,18 +20,23 @@
     "style-loader": "^0.20.1",
     "typescript": "^2.7.1",
     "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.11.1"
+    "webpack-serve": "^0.1.4"
   },
   "dependencies": {
+    "@types/core-js": "^0.9.46",
+    "@types/node": "^9.4.6",
     "@types/react": "^16.0.36",
     "@types/react-dom": "^16.0.3",
     "@types/react-redux": "^5.0.14",
     "@types/redux-immutable": "^3.0.38",
+    "bluebird": "^3.5.1",
+    "core-js": "^2.5.3",
     "immutable": "^3.8.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "redux-immutable": "^4.0.0",
+    "redux-saga": "^0.16.0",
     "reselect": "^3.0.1"
   }
 }

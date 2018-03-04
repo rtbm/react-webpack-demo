@@ -6,7 +6,8 @@
     "module": "commonjs",
     "target": "es5",
     "jsx": "react",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "lib": ["es5", "es6", "dom"]
   },
   "include": [
     "./src/**/*"

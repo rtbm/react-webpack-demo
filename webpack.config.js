@@ -45,10 +45,11 @@ module.exports = {
     'react-dom': 'ReactDOM'
   },*/
 
-  plugins: [new HtmlWebpackPlugin({
-    template: './src/index.html',
-    inject: 'body',
-  }),
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      inject: 'body',
+    }),
     new ExtractTextPlugin('styles.css'),
   ],
 };
