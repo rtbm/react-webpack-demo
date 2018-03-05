@@ -44,7 +44,7 @@ function mapDispatchToProps(dispatch: (action: IAction) => {}) {
     }),
     incrementAsync: () => dispatch({
       type: ASYNC_COUNTER_INCREMENT_ASYNC,
-    })
+    }),
   };
 }
 

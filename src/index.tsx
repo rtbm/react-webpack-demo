@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom';
-import { HelloWorld, TodoList, AsyncCounter } from './components';
+import { HelloWorld, TodoList, AsyncCounter, WeatherForecast } from './components';
 
 import { Provider } from 'react-redux';
 import { store } from './state/store';
@@ -16,6 +16,9 @@ ReactDOM.render(
 
       <h2>Async Counter</h2>
       <AsyncCounter />
+
+      <h2>Weather Forecast</h2>
+      <WeatherForecast />
     </div>
   </Provider>,
 
